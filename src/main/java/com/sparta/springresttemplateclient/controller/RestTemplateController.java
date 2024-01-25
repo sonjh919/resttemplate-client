@@ -35,7 +35,7 @@ public class RestTemplateController {
     }
 
     @GetMapping("/exchange-call")
-    public List<ItemDto> exchangeCall(@RequestHeader("Authorization") String token) {
+    public List<ItemDto> exchangeCall(@RequestHeader("Authorization") String token) {   // header에 jwt 토큰 받아오기
         return restTemplateService.exchangeCall(token);
     }
 }
